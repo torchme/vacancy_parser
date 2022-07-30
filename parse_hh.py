@@ -5,7 +5,6 @@ import re
 import os
 import csv
 from termcolor import colored, cprint
-#@VadimOlegowich @anonimus_prog @elpharran
 
 #search_vacancy_list = ['data scientist', 'аналитик данных', 'machine learning', 'data engineer', 'data analyst']
 search_vacancy_list = ['data scientist', 'аналитик данных', 'machine learning']
@@ -158,7 +157,7 @@ def make_tmp_dataset(total_vac_list):
     encoded in utf-8
     """
     keys = total_vac_list[0].keys()
-    with open("data/tmp.csv", "w", encoding='utf-8') as file:
+    with open("data/hh_tmp.csv", "w", encoding='utf-8') as file:
         csvwriter = csv.DictWriter(file, keys)
         csvwriter.writeheader()
         csvwriter.writerows(total_vac_list)
